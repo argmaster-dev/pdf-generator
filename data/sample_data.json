@@ -1,0 +1,24 @@
+[
+  {
+    "invoice_id": "INV-101",
+    "customer_name": "ООО Компания А",
+    "date": "2025-01-20",
+    "amount": 5000.00,
+    "description": "Разработка веб-приложения",
+    "items": [
+      {"name": "Frontend разработка", "quantity": 40, "price": 100.00},
+      {"name": "Backend разработка", "quantity": 30, "price": 100.00}
+    ]
+  },
+  {
+    "invoice_id": "INV-102",
+    "customer_name": "ИП Смирнов",
+    "date": "2025-01-21",
+    "amount": 1200.00,
+    "description": "SEO оптимизация",
+    "items": [
+      {"name": "Аудит сайта", "quantity": 1, "price": 500.00},
+      {"name": "Оптимизация контента", "quantity": 1, "price": 700.00}
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счет {{invoice_id}}</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        body {
+            font-family: 'DejaVu Sans', Arial, sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #4a90e2;
+            margin: 0;
+            font-size: 28pt;
+        }
+        .invoice-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .info-block {
+            flex: 1;
+        }
+        .info-block h3 {
+            color: #4a90e2;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            margin: 8px 0;
+        }
+        .info-label {
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+        }
+        .amount-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            text-align: right;
+        }
+        .amount-total {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #4a90e2;
+            margin-top: 10px;
+        }
+        .description {
+            background-color: #fafafa;
+            padding: 15px;
+            border-left: 4px solid #4a90e2;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            font-size: 10pt;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>СЧЕТ НА ОПЛАТУ</h1>
+    </div>
+    
+    <div class="invoice-info">
+        <div class="info-block">
+            <h3>Информация о счете</h3>
+            <div class="info-row">
+                <span class="info-label">Номер счета:</span>
+                <span>{{invoice_id}}</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Дата:</span>
+                <span>{{date}}</span>
+            </div>
+        </div>
+        
+        <div class="info-block">
+            <h3>Клиент</h3>
+            <div class="info-row">
+                <span class="info-label">Имя:</span>
+                <span>{{customer_name}}</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="description">
+        <strong>Описание:</strong> {{description}}
+    </div>
+    
+    <div class="amount-section">
+        <div style="font-size: 14pt; margin-bottom: 10px;">Сумма к оплате:</div>
+        <div class="amount-total">{{amount}} ₽</div>
+    </div>
+    
+    <div class="footer">
+        <p>Спасибо за ваш заказ!</p>
+        <p>Это автоматически сгенерированный документ</p>
+    </div>
+</body>
+</html>
