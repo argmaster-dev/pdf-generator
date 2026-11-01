@@ -151,6 +151,10 @@ JSON файлы могут быть:
 - После генерации PDF автоматически открывается в системной программе
 - На Windows требуется установка GTK+ для работы WeasyPrint
 
+## Автор
+
+Telegram-канал [@sitimlab](https://t.me/sitimlab) · сайт [sitimlab.ru](https://sitimlab.ru/?utm_source=github&utm_medium=profile)
+
 ## Лицензия
 
 MIT — см. [LICENSE](LICENSE).
